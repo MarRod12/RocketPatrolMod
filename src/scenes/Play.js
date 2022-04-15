@@ -85,6 +85,7 @@ class Play extends Phaser.Scene {
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or ← to Menu', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
         }, null, this);
+
     }
 
     update() {
@@ -98,7 +99,7 @@ class Play extends Phaser.Scene {
         }
 
         this.starfield.tilePositionX -= 3;  // update tile sprite
-        this.sand.tilePositionX +=3;
+        this.sand.tilePositionX -= 4;
 
         if(!this.gameOver) {
             this.p1Rocket.update();             // update p1
