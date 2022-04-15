@@ -2,7 +2,7 @@
     20 - Create new artwork for all of the in-game assets (rocket, spaceships, explosion)
     20 - Use Phaser's particle emitter to create a particle explosion when the rocket hits the spaceship
     10- Implement parallax scrolling
-    10 - Display the time remaining (in seconds) on the screen
+    10 -Display the time remaining (in seconds) on the screen
     5 - Randomize each spaceship's movement direction at the start of each play
     5 - Create a new scrolling tile sprite for the background
     5 - Allow the player to control the Rocket after it's fired
