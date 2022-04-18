@@ -15,6 +15,7 @@ class Play extends Phaser.Scene {
         this.load.image('duck', './assets/duck.png');
         this.load.image('ocean', './assets/oceanwaves.png');
         this.load.image('sand', './assets/sand.png');
+        this.load.image('depth', './assets/sand2.png');
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
     }
@@ -22,6 +23,7 @@ class Play extends Phaser.Scene {
     create() {
         // place tile sprite
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'ocean').setOrigin(0, 0);
+        this.sand2 = this.add.tileSprite(0, 0, 640, 480, 'depth').setOrigin(0, 0.025); 
         this.sand = this.add.tileSprite(0, 0, 640, 480, 'sand').setOrigin(0,0.025);
 
         // green UI background
@@ -117,6 +119,7 @@ class Play extends Phaser.Scene {
 
         this.starfield.tilePositionX -= 3;  // update tile sprite
         this.sand.tilePositionX -= 4;
+        this.sand2.tilePositionX -= 2;
 
         if(!this.gameOver) {
             this.p1Rocket.update();             // update p1
