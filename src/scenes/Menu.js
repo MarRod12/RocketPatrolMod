@@ -2,6 +2,10 @@ class Menu extends Phaser.Scene {
     constructor() {
         super("menuScene");
     }
+    /*
+      Quack audio taken from: "https://www.myinstants.com/instant/quackmp3/"
+      Splash audio taken from: "https://www.fesliyanstudios.com/royalty-free-sound-effects-download/water-splashing-20"
+    */
 
     preload() {
         // load audio

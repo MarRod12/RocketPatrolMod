@@ -166,6 +166,9 @@ class Play extends Phaser.Scene {
         // score add and repaint
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score; 
+
+        //add time
+        this.clock.delay += ship.points * 100;
         
         this.sound.play('quack');
       }
