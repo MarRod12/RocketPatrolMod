@@ -69,6 +69,20 @@ class Play extends Phaser.Scene {
             },
             fixedWidth: 100
         }
+
+        //display counter in seconds
+        let timeConfig = {
+            fontFamily: 'Courier',
+            fontSize: '18px',
+            backgroundColor: '#8a5a1c',
+            color: '#ffffff',
+            align: 'right',
+            padding: {
+                top: 5,
+                bottom: 5,
+            },
+        }
+
         this.scoreLeft = this.add.text(borderUISize + borderPadding, borderUISize + borderPadding*2, this.p1Score, scoreConfig);
 
         // GAME OVER flag
@@ -82,6 +96,10 @@ class Play extends Phaser.Scene {
             this.gameOver = true;
         }, null, this);
 
+        //countdown
+        this.countdown;
+        this.timer = this.add.text(borderUISize + borderPadding*35, borderUISize + borderPadding*2, 'Countdown: ' + this.countdown, timeConfig);
+
     }
 
     update() {
@@ -93,6 +111,9 @@ class Play extends Phaser.Scene {
         if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             this.scene.start("menuScene");
         }
+
+        //timer
+        this.timer.text = 'Countdown: ' + this.clock.getRemainingSeconds().toFixed(0);
 
         this.starfield.tilePositionX -= 3;  // update tile sprite
         this.sand.tilePositionX -= 4;
