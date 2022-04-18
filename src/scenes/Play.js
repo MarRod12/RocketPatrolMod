@@ -1,9 +1,3 @@
-/*  Points
-    60 - Redesign the game's artwork, UI, and sound to change its theme/aesthetic (to something other than sci-fi)
-    20 - Implement a new timing/scoring mechanism that adds time to the clock for successful hits
-    10- Implement parallax scrolling
-    10 -Display the time remaining (in seconds) on the screen
-*/
 class Play extends Phaser.Scene {
     constructor() {
         super("playScene");
