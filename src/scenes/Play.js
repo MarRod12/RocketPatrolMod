@@ -112,7 +112,7 @@ class Play extends Phaser.Scene {
         this.timer.text = 'Countdown: ' + this.clock.getRemainingSeconds().toFixed(0);
 
         this.starfield.tilePositionX -= 3;  // update tile sprite
-        this.sand.tilePositionX -= 4;
+        this.sand.tilePositionX -= 3;
         this.sand2.tilePositionX -= 2;
 
         if(!this.gameOver) {
